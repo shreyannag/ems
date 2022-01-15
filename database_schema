@@ -1,0 +1,75 @@
+D:\aditya\project>mysql -u root -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 11
+Server version: 10.4.19-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]>
+MariaDB [(none)]> create database ems;
+Query OK, 1 row affected (0.001 sec)
+
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| ems                |
+| friends            |
+| information_schema |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
+| teacher            |
+| x11sc              |
++--------------------+
+8 rows in set (0.002 sec)
+
+MariaDB [(none)]> use ems;
+Database changed
+MariaDB [ems]> create table employee(emp_id int auto_increment primary key,         
+    -> emp_name varchar(255) not null,
+    -> emp_salary bigint not null,
+    -> emp_dob date not null,
+    -> emp_doj date not null,
+    -> emp_dol date,
+    -> emp_position varchar(255) not null
+    -> );
+Query OK, 0 rows affected (0.434 sec)
+
+MariaDB [ems]> desc employee;
++--------------+--------------+------+-----+---------+----------------+
+| Field        | Type         | Null | Key | Default | Extra          |
++--------------+--------------+------+-----+---------+----------------+
+| emp_id       | int(11)      | NO   | PRI | NULL    | auto_increment |
+| emp_name     | varchar(255) | NO   |     | NULL    |                |
+| emp_salary   | bigint(20)   | NO   |     | NULL    |                |
+| emp_dob      | date         | NO   |     | NULL    |                |
+| emp_doj      | date         | NO   |     | NULL    |                |
+| emp_dol      | date         | YES  |     | NULL    |                |
+| emp_position | varchar(255) | NO   |     | NULL    |                |
++--------------+--------------+------+-----+---------+----------------+
+7 rows in set (0.061 sec)
+
+MariaDB [ems]> create table adminstrator(
+    -> admin_id int auto_increment primary key,
+    -> admin_name varchar(255) not null,
+    -> admin_dob date not null,
+    -> admin_passwd varchar(255) not null
+    -> );
+Query OK, 0 rows affected (0.201 sec)
+
+MariaDB [ems]> desc adminstrator;
++--------------+--------------+------+-----+---------+----------------+
+| Field        | Type         | Null | Key | Default | Extra          |
++--------------+--------------+------+-----+---------+----------------+
+| admin_id     | int(11)      | NO   | PRI | NULL    | auto_increment |
+| admin_name   | varchar(255) | NO   |     | NULL    |                |
+| admin_dob    | date         | NO   |     | NULL    |                |
+| admin_passwd | varchar(255) | NO   |     | NULL    |                |
++--------------+--------------+------+-----+---------+----------------+
+4 rows in set (0.019 sec)
+
+MariaDB [ems]>

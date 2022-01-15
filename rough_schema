@@ -1,0 +1,25 @@
+Employee Management System (Database name: ems)
+------>Employee (✅)
+			---->EmployeeID  (int)
+			--->Name of the employee (emp_name) (varchar)
+			--->Salary (int)
+			---->Date of joining (emp_DOJ) (date)
+			---->Date of birth (emp_DOB) (date)
+			---->Date of leaving (emp_DOL) (date)
+			---->Position (varchar)
+			
+            
+
+------> Adminstrator
+			Table (✅)
+			--->AdminID (int)
+			--->AdminName (varchar)
+			--->AdminDOB (date)
+			--->AdminPasswd (varchar)
+
+			Can use functions to control the employee table
+			--->Add Employee✅
+			--->Remove Employee
+			--->Update Employee details
+			--->Update Promotion
+			--->Update Salary
