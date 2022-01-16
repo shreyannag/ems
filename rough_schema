@@ -23,3 +23,10 @@ Employee Management System (Database name: ems)
 			--->Update Employee details
 			--->Update Promotion
 			--->Update Salary
+
+
+-----> Logs
+		---> LogID (int)
+		---> AdminLoginTime(Date Time)
+		---> Changes (text)
+		---> AdminLogoutTime(Date Time)
